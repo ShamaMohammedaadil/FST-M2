@@ -8,7 +8,7 @@ services:
         command: ["redis-server", "--protected-mode", "no"]
     api:
         build: ./server
-        image: "docker.io/poulami54/complex-api"
+        image: "docker.io/shama431/complex-api"
         environment:
             - REDIS_HOST=redis
             - REDIS_PORT=6379
@@ -20,14 +20,14 @@ services:
 
     worker:
         build: ./worker
-        image: "docker.io/poulami54/complex-worker"
+        image: "docker.io/shama431/complex-worker"
         environment:
             - REDIS_HOST=redis
             - REDIS_PORT=6379
 
     client:
         build: ./client
-        image: "docker.io/poulami54/complex-client"
+        image: "docker.io/shama431/complex-client"
     nginx:
         depends_on:
             - api
