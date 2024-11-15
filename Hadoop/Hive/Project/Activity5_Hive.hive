@@ -11,7 +11,7 @@ TBLPROPERTIES ("skip.header.line.count"="1");
 LOAD DATA LOCAL INPATH '/root/empData.csv' INTO TABLE employee;
 
 --Export result to local folder
-INSERT OVERWRITE DIRECTORY 'hdfs:///user/priya/HiveResult1'
+INSERT OVERWRITE DIRECTORY 'hdfs:///user/shama/HiveResult1'
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
 SELECT id, name FROM employee;
 
