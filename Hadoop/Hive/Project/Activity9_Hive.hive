@@ -8,7 +8,7 @@ CLUSTERED BY (Zipcode) INTO 3 BUCKETS
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
 
 -- Load data into table
-LOAD DATA LOCAL INPATH '/root/zipcodes.csv' INTO TABLE zipcodes;
+LOAD DATA LOCAL INPATH '/root/Activity9.csv' INTO TABLE zipcodes;
 
 -- Get data from table
 INSERT OVERWRITE LOCAL DIRECTORY '/root/HiveResult4'
